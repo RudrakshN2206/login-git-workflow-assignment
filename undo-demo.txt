@@ -1,1 +1,0 @@
-This temporary note demonstrates how to undo a committed change safely with git revert.
