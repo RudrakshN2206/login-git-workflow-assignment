@@ -58,10 +58,10 @@ Shows the current branch and whether the working tree has uncommitted changes.
 Displays a compact graph of commits and branches, including the merge and revert.
 
 20. git add git_commands.txt
-Stages this command reference for inclusion in the repository.
+Stages this command reference for inclusion or update in the repository.
 
 21. git commit -m 'Document Git commands used'
-Records the command documentation in the repository.
+Records the original command documentation in the repository.
 
 22. git config user.name 'Rudraksh Nigotia'
 Sets the final author display name for new commits.
@@ -78,13 +78,20 @@ Displays local branches and the commit currently at each branch tip.
 26. git remote -v
 Displays the configured remote names and URLs.
 
-GITHUB COMPLETION COMMANDS
+27. git add git_commands.txt
+Stages the final command log update.
 
-27. git remote add origin https://github.com/RudrakshN2206/login-git-workflow-assignment.git
-Connects the local repository to the public GitHub repository.
+28. git commit -m 'Document author setup and GitHub publishing commands'
+Records the final author information and GitHub commands in the repository.
 
-28. git push -u origin main
-Uploads main and its complete reachable commit history to GitHub.
+GITHUB REPOSITORY
+Public repository: https://github.com/RudrakshN2206/login-git-workflow-assignment
 
-29. git push -u origin feature
-Uploads feature so its branch activity is visible on GitHub.
+29. git remote add origin https://github.com/RudrakshN2206/login-git-workflow-assignment.git
+Connects the local repository to the new public GitHub repository. Completed.
+
+30. git push -u origin main
+Uploads main and its reachable commit history to GitHub. Attempted; GitHub terminal authentication is still required.
+
+31. git push -u origin feature
+Uploads feature so its branch activity is visible on GitHub. Run after terminal authentication is available.
