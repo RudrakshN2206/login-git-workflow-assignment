@@ -91,7 +91,29 @@ Public repository: https://github.com/RudrakshN2206/login-git-workflow-assignmen
 Connects the local repository to the new public GitHub repository. Completed.
 
 30. git push -u origin main
-Uploads main and its reachable commit history to GitHub. Attempted; GitHub terminal authentication is still required.
+Uploads main and its reachable commit history to GitHub. Completed; main tracks origin/main.
 
 31. git push -u origin feature
-Uploads feature so its branch activity is visible on GitHub. Run after terminal authentication is available.
+Uploads feature so its branch activity is visible on GitHub. Completed; feature tracks origin/feature.
+
+GITHUB CLI AUTHENTICATION COMMANDS USED
+
+A. gh auth login --hostname github.com --git-protocol https --web --skip-ssh-key
+Starts GitHub's browser device flow so the account owner can authorize the CLI.
+
+B. gh auth status --hostname github.com
+Checks that the GitHub CLI is authenticated to github.com.
+
+C. gh auth setup-git
+Configures Git to use the authenticated GitHub CLI as its credential helper.
+
+FINAL DOCUMENTATION UPDATE
+
+34. git add git_commands.txt
+Stages this final record of completed branch pushes.
+
+35. git commit -m 'Record completed GitHub pushes'
+Records that both branches have been uploaded.
+
+36. git push origin main
+Uploads the final command log update on main.
