@@ -4,10 +4,10 @@ GIT COMMANDS USED
 Creates a new local Git repository and names its starting branch main.
 
 2. git config user.name 'Student Author'
-Sets the author name for commits in this repository. Replace Student Author with your own name before submission.
+Sets the initial placeholder author name. The commit history was later updated to the student's chosen author identity.
 
 3. git config user.email 'student@example.com'
-Sets the author email for commits in this repository. Replace this placeholder with your GitHub noreply email or preferred commit email before submission.
+Sets the initial placeholder author email. The commit history was later updated to the student's chosen author identity.
 
 4. git add index.html about.html
 Stages the initial website files so they can be included in the first commit.
@@ -63,13 +63,28 @@ Stages this command reference for inclusion in the repository.
 21. git commit -m 'Document Git commands used'
 Records the command documentation in the repository.
 
-GITHUB COMPLETION COMMANDS (run after creating an empty public repository on GitHub)
+22. git config user.name 'Rudraksh Nigotia'
+Sets the final author display name for new commits.
 
-22. git remote add origin <PUBLIC_REPOSITORY_URL>
-Connects this local repository to the public GitHub repository. Replace the placeholder with the URL GitHub provides.
+23. git config user.email 'rudrakshnigotia_23ae057@dtu.ac.in'
+Sets the email supplied by the student for commit attribution. This email is visible in public Git history.
 
-23. git push -u origin main
-Uploads the main branch and its full reachable commit history to GitHub.
+24. git filter-branch --force --env-filter 'export GIT_AUTHOR_NAME="Rudraksh Nigotia"; export GIT_AUTHOR_EMAIL="rudrakshnigotia_23ae057@dtu.ac.in"; export GIT_COMMITTER_NAME="Rudraksh Nigotia"; export GIT_COMMITTER_EMAIL="rudrakshnigotia_23ae057@dtu.ac.in"' -- --all
+Rewrites local branch history so every commit uses the student's selected author and committer identity.
 
-24. git push -u origin feature
-Uploads the feature branch so its branch activity is visible on GitHub.
+25. git branch -avv
+Displays local branches and the commit currently at each branch tip.
+
+26. git remote -v
+Displays the configured remote names and URLs.
+
+GITHUB COMPLETION COMMANDS
+
+27. git remote add origin https://github.com/RudrakshN2206/login-git-workflow-assignment.git
+Connects the local repository to the public GitHub repository.
+
+28. git push -u origin main
+Uploads main and its complete reachable commit history to GitHub.
+
+29. git push -u origin feature
+Uploads feature so its branch activity is visible on GitHub.
